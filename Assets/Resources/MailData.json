@@ -1,0 +1,170 @@
+{
+    "addresses": [
+      {
+        "street": "Northern Boulevard",
+        "numbers": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,20,22,24,26,28]
+      },
+      {
+        "street": "Black Tip",
+        "numbers": [2, 4]
+      },
+      {
+        "street": "King's Street",
+        "numbers": [1,2,3,4,5,6,8]
+      },
+      {
+        "street": "Oak Street",
+        "numbers": [2,4,6]
+      },
+      {
+        "street": "Stone Street",
+        "numbers": [1,3,5,7]
+      },
+      {
+        "street": "Southern Boulevard",
+        "numbers": [1,2,3,4,5,7,9,11,13,15,17]
+      },
+      {
+        "street": "Red Star",
+        "numbers": [1,2,3,4,5,6,7,8,10,12,14]
+      }
+    ],
+
+    "names": [
+        "Mila",
+        "Aleksandar",
+        "Ana",
+        "Stefan",
+        "Jovana",
+        "Nikola",
+        "Ivana",
+        "Marko",
+        "Luka",
+        "Maja",
+        "Filip",
+        "Sara",
+        "Petar",
+        "Marija",
+        "Nemanja",
+        "Jelena",
+        "Dušan",
+        "Katarina",
+        "Andrej",
+        "Sanja"
+    ],
+
+    "surnames": [
+      "Jovanović",
+      "Ilić",
+      "Petrović",
+      "Marković",
+      "Nikolić",
+      "Stojanović",
+      "Pavlović",
+      "Đorđević",
+      "Milošević",
+      "Stanković",
+      "Stefanović",
+      "Đurić",
+      "Vasić",
+      "Todorović",
+      "Đorđević",
+      "Kostić",
+      "Janković",
+      "Jović",
+      "Kovačević",
+      "Mitić"
+    ],
+
+    "intros": [
+      "Poštovani",
+      "Dragi",
+      "Cijenjeni",
+      "Dragocjeni",
+      "S poštovanjem",
+      "Srdačan pozdrav",
+      "Dobro jutro",
+      "Dobro veče",
+      "Pozdrav",
+      "Draga kolegice/kolega",
+      "Poštovana gospođo/gospođice",
+      "Dragi prijatelju/prijateljice",
+      "Drago mi je da se čujemo",
+      "Nadam se da ste dobro",
+      "Lijep pozdrav iz [mjesto]",
+      "Želim vam dobar dan",
+      "Dobrodošli u [naziv tvrtke]",
+      "Puno vam hvala na vašem vremenu",
+      "Veselim se vašem odgovoru",
+      "Sretan dan"
+    ],
+
+    "middles": [
+    "Pišem vam u vezi...",
+    "S obzirom na našu nedavnu suradnju...",
+    "Želio/željela bih vam predstaviti...",
+    "Imamo uzbudljive vijesti...",
+    "Želim vas obavijestiti o novom projektu...",
+    "U vezi našeg prethodnog razgovora...",
+    "Hvala vam na vašem prijedlogu...",
+    "Molim vas za vaše mišljenje o...",
+    "Imamo nekoliko važnih ažuriranja...",
+    "Želio/željela bih vas pozvati na sastanak...",
+    "Obratili smo se drugim stručnjacima u vezi...",
+    "Predlažem da razmotrimo mogućnost...",
+    "U vezi našeg zajedničkog projekta...",
+    "S velikim zadovoljstvom vas obavještavam...",
+    "Pitanje koje se pojavilo je...",
+    "Zamolio/la bih vas za dodatne informacije o...",
+    "Molim vas da potvrdite prisutnost na sastanku...",
+    "Imate li slobodnog vremena za sastanak u...",
+    "Htio/htjela bih vas upitati o vašem mišljenju o...",
+    "Nadam se da ćemo uspješno surađivati na..."
+    ],
+
+    "concepts": [
+      "Vaša prethodna poruka",
+      "Naš prethodni razgovor",
+      "Naša nedavna suradnja",
+      "Aktivnosti na projektu",
+      "Predstavljanje novih ideja",
+      "Pregled rezultata istraživanja",
+      "Mogućnosti za unapređenje",
+      "Detalji o događaju/sastanku",
+      "Povratne informacije korisnika/klijenata",
+      "Priprema za nadolazeći projekt",
+      "Rješavanje problema ili izazova",
+      "Važni poslovni rezultati",
+      "Pitanja vezana za budžet/financije",
+      "Planiranje marketinške kampanje",
+      "Ažuriranje rokova i vremenskih okvira",
+      "Koordinacija s drugim timovima/odjelima",
+      "Planiranje implementacije novih procesa",
+      "Razmatranje mogućnosti suradnje",
+      "Analiza konkurencije/tržišta",
+      "Prijedlozi za unapređenje poslovnih aktivnosti"
+    ],
+
+    "finishings": [
+      "Molim vas da mi što prije odgovorite.",
+      "Unaprijed zahvaljujem na vašem odgovoru.",
+      "Veselim se vašem povratnom informacijom.",
+      "Ako imate bilo kakva dodatna pitanja, slobodno me kontaktirajte.",
+      "Hvala unaprijed na vašem angažmanu u ovom pitanju.",
+      "Očekujem vaš odgovor s nestrpljenjem.",
+      "Molim vas da mi javite svoje mišljenje.",
+      "Ukoliko vam je potrebno više informacija, molim vas da me obavijestite.",
+      "Hvala vam na vašem vremenu i pažnji.",
+      "Radujem se suradnji s vama u vezi ovog pitanja.",
+      "Molim vas da mi dostavite detalje što prije.",
+      "Srdačno vam se zahvaljujem na vašem trudu.",
+      "Ako trebate bilo kakvu dodatnu pomoć, slobodno se obratite.",
+      "Veselim se vašem pozitivnom odgovoru.",
+      "Hvala vam na suradnji u rješavanju ovog pitanja.",
+      "Molim vas da me obavijestite o daljnjem tijeku.",
+      "Zahvaljujem vam na razumijevanju i brzom odgovoru.",
+      "Ukoliko imate bilo kakve prijedloge, slobodno ih podijelite.",
+      "Očekujem uspješno rješenje ovog pitanja u suradnji s vama.",
+      "Molim vas da mi javite ako imate bilo kakve nedoumice."
+    ]
+}
