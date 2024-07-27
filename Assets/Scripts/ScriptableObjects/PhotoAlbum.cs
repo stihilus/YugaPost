@@ -4,15 +4,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PhotoAlbum", menuName = "ScriptableObjects/PhotoAlbum", order = 1)]
 public class PhotoAlbum : ScriptableObject
 {
-    public List<Sprite> photos = new List<Sprite>();
+    public List<string> photos = new List<string>();
 
-    public void AddPhoto(Sprite photo)
+    public void AddPhoto(string fileName)
     {
-        photos.Add(photo);
+        photos.Add(fileName);
     }
 
-    public void RemovePhoto(Sprite photo)
+    public void RemovePhoto(string fileName)
     {
-        photos.Remove(photo);
+        photos.Remove(fileName);
     }
 }

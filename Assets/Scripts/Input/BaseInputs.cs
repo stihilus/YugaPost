@@ -89,6 +89,15 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""2f12de04-c506-48f9-9c8c-2f6f72398ca0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -300,6 +309,17 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""action"": ""TakePhoto"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd226232-9997-40af-8553-f3301189af1f"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -308,7 +328,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
             ""id"": ""f31e4faa-1c5c-4639-8b04-28d228fa7d69"",
             ""actions"": [
                 {
-                    ""name"": ""OpenUI"",
+                    ""name"": ""CloseUI"",
                     ""type"": ""Button"",
                     ""id"": ""3475532f-8a12-4e12-8248-4900f2c2ac50"",
                     ""expectedControlType"": ""Button"",
@@ -317,7 +337,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Next"",
+                    ""name"": ""NavBottomRight"",
                     ""type"": ""Button"",
                     ""id"": ""236161d8-15ac-415a-8910-91d86584b88a"",
                     ""expectedControlType"": ""Button"",
@@ -326,7 +346,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Previous"",
+                    ""name"": ""NavBottomLeft"",
                     ""type"": ""Button"",
                     ""id"": ""12b005dd-ca50-42ee-9b22-71222e647d34"",
                     ""expectedControlType"": ""Button"",
@@ -335,18 +355,18 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Map"",
+                    ""name"": ""NavMiddleLeft"",
                     ""type"": ""Button"",
-                    ""id"": ""fd933fc8-63b2-41f6-bb4e-13c9323a8d50"",
+                    ""id"": ""ac1d0731-3e0c-4ded-a649-df7b4660f713"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Inventory"",
+                    ""name"": ""NavMiddleRight"",
                     ""type"": ""Button"",
-                    ""id"": ""a4aef749-f644-4747-97b5-6dd2c642eb42"",
+                    ""id"": ""064f1341-1593-4088-9e8a-ceb76cc0b591"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -370,7 +390,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""OpenUI"",
+                    ""action"": ""CloseUI"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -381,7 +401,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Next"",
+                    ""action"": ""NavBottomRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -392,29 +412,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Previous"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0a346106-90cf-4e06-a3d7-5757f0ed7ce1"",
-                    ""path"": ""<Keyboard>/m"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Map"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f1c10c75-b5db-435e-a657-dd906d60639b"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
-                    ""action"": ""Inventory"",
+                    ""action"": ""NavBottomLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -426,6 +424,28 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
                     ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""313c0236-fe88-4e45-8b47-6966c84180dd"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""NavMiddleLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b4a8c93d-e759-4292-8fd4-8e8ff04ea282"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""NavMiddleRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -491,13 +511,14 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_PhotoMode = m_Player.FindAction("PhotoMode", throwIfNotFound: true);
         m_Player_TakePhoto = m_Player.FindAction("TakePhoto", throwIfNotFound: true);
+        m_Player_OpenUI = m_Player.FindAction("OpenUI", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_OpenUI = m_UI.FindAction("OpenUI", throwIfNotFound: true);
-        m_UI_Next = m_UI.FindAction("Next", throwIfNotFound: true);
-        m_UI_Previous = m_UI.FindAction("Previous", throwIfNotFound: true);
-        m_UI_Map = m_UI.FindAction("Map", throwIfNotFound: true);
-        m_UI_Inventory = m_UI.FindAction("Inventory", throwIfNotFound: true);
+        m_UI_CloseUI = m_UI.FindAction("CloseUI", throwIfNotFound: true);
+        m_UI_NavBottomRight = m_UI.FindAction("NavBottomRight", throwIfNotFound: true);
+        m_UI_NavBottomLeft = m_UI.FindAction("NavBottomLeft", throwIfNotFound: true);
+        m_UI_NavMiddleLeft = m_UI.FindAction("NavMiddleLeft", throwIfNotFound: true);
+        m_UI_NavMiddleRight = m_UI.FindAction("NavMiddleRight", throwIfNotFound: true);
         m_UI_LeftClick = m_UI.FindAction("LeftClick", throwIfNotFound: true);
     }
 
@@ -567,6 +588,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_PhotoMode;
     private readonly InputAction m_Player_TakePhoto;
+    private readonly InputAction m_Player_OpenUI;
     public struct PlayerActions
     {
         private @BaseInputs m_Wrapper;
@@ -578,6 +600,7 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @PhotoMode => m_Wrapper.m_Player_PhotoMode;
         public InputAction @TakePhoto => m_Wrapper.m_Player_TakePhoto;
+        public InputAction @OpenUI => m_Wrapper.m_Player_OpenUI;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -608,6 +631,9 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
             @TakePhoto.started += instance.OnTakePhoto;
             @TakePhoto.performed += instance.OnTakePhoto;
             @TakePhoto.canceled += instance.OnTakePhoto;
+            @OpenUI.started += instance.OnOpenUI;
+            @OpenUI.performed += instance.OnOpenUI;
+            @OpenUI.canceled += instance.OnOpenUI;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -633,6 +659,9 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
             @TakePhoto.started -= instance.OnTakePhoto;
             @TakePhoto.performed -= instance.OnTakePhoto;
             @TakePhoto.canceled -= instance.OnTakePhoto;
+            @OpenUI.started -= instance.OnOpenUI;
+            @OpenUI.performed -= instance.OnOpenUI;
+            @OpenUI.canceled -= instance.OnOpenUI;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -654,21 +683,21 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
-    private readonly InputAction m_UI_OpenUI;
-    private readonly InputAction m_UI_Next;
-    private readonly InputAction m_UI_Previous;
-    private readonly InputAction m_UI_Map;
-    private readonly InputAction m_UI_Inventory;
+    private readonly InputAction m_UI_CloseUI;
+    private readonly InputAction m_UI_NavBottomRight;
+    private readonly InputAction m_UI_NavBottomLeft;
+    private readonly InputAction m_UI_NavMiddleLeft;
+    private readonly InputAction m_UI_NavMiddleRight;
     private readonly InputAction m_UI_LeftClick;
     public struct UIActions
     {
         private @BaseInputs m_Wrapper;
         public UIActions(@BaseInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @OpenUI => m_Wrapper.m_UI_OpenUI;
-        public InputAction @Next => m_Wrapper.m_UI_Next;
-        public InputAction @Previous => m_Wrapper.m_UI_Previous;
-        public InputAction @Map => m_Wrapper.m_UI_Map;
-        public InputAction @Inventory => m_Wrapper.m_UI_Inventory;
+        public InputAction @CloseUI => m_Wrapper.m_UI_CloseUI;
+        public InputAction @NavBottomRight => m_Wrapper.m_UI_NavBottomRight;
+        public InputAction @NavBottomLeft => m_Wrapper.m_UI_NavBottomLeft;
+        public InputAction @NavMiddleLeft => m_Wrapper.m_UI_NavMiddleLeft;
+        public InputAction @NavMiddleRight => m_Wrapper.m_UI_NavMiddleRight;
         public InputAction @LeftClick => m_Wrapper.m_UI_LeftClick;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
@@ -679,21 +708,21 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
-            @OpenUI.started += instance.OnOpenUI;
-            @OpenUI.performed += instance.OnOpenUI;
-            @OpenUI.canceled += instance.OnOpenUI;
-            @Next.started += instance.OnNext;
-            @Next.performed += instance.OnNext;
-            @Next.canceled += instance.OnNext;
-            @Previous.started += instance.OnPrevious;
-            @Previous.performed += instance.OnPrevious;
-            @Previous.canceled += instance.OnPrevious;
-            @Map.started += instance.OnMap;
-            @Map.performed += instance.OnMap;
-            @Map.canceled += instance.OnMap;
-            @Inventory.started += instance.OnInventory;
-            @Inventory.performed += instance.OnInventory;
-            @Inventory.canceled += instance.OnInventory;
+            @CloseUI.started += instance.OnCloseUI;
+            @CloseUI.performed += instance.OnCloseUI;
+            @CloseUI.canceled += instance.OnCloseUI;
+            @NavBottomRight.started += instance.OnNavBottomRight;
+            @NavBottomRight.performed += instance.OnNavBottomRight;
+            @NavBottomRight.canceled += instance.OnNavBottomRight;
+            @NavBottomLeft.started += instance.OnNavBottomLeft;
+            @NavBottomLeft.performed += instance.OnNavBottomLeft;
+            @NavBottomLeft.canceled += instance.OnNavBottomLeft;
+            @NavMiddleLeft.started += instance.OnNavMiddleLeft;
+            @NavMiddleLeft.performed += instance.OnNavMiddleLeft;
+            @NavMiddleLeft.canceled += instance.OnNavMiddleLeft;
+            @NavMiddleRight.started += instance.OnNavMiddleRight;
+            @NavMiddleRight.performed += instance.OnNavMiddleRight;
+            @NavMiddleRight.canceled += instance.OnNavMiddleRight;
             @LeftClick.started += instance.OnLeftClick;
             @LeftClick.performed += instance.OnLeftClick;
             @LeftClick.canceled += instance.OnLeftClick;
@@ -701,21 +730,21 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IUIActions instance)
         {
-            @OpenUI.started -= instance.OnOpenUI;
-            @OpenUI.performed -= instance.OnOpenUI;
-            @OpenUI.canceled -= instance.OnOpenUI;
-            @Next.started -= instance.OnNext;
-            @Next.performed -= instance.OnNext;
-            @Next.canceled -= instance.OnNext;
-            @Previous.started -= instance.OnPrevious;
-            @Previous.performed -= instance.OnPrevious;
-            @Previous.canceled -= instance.OnPrevious;
-            @Map.started -= instance.OnMap;
-            @Map.performed -= instance.OnMap;
-            @Map.canceled -= instance.OnMap;
-            @Inventory.started -= instance.OnInventory;
-            @Inventory.performed -= instance.OnInventory;
-            @Inventory.canceled -= instance.OnInventory;
+            @CloseUI.started -= instance.OnCloseUI;
+            @CloseUI.performed -= instance.OnCloseUI;
+            @CloseUI.canceled -= instance.OnCloseUI;
+            @NavBottomRight.started -= instance.OnNavBottomRight;
+            @NavBottomRight.performed -= instance.OnNavBottomRight;
+            @NavBottomRight.canceled -= instance.OnNavBottomRight;
+            @NavBottomLeft.started -= instance.OnNavBottomLeft;
+            @NavBottomLeft.performed -= instance.OnNavBottomLeft;
+            @NavBottomLeft.canceled -= instance.OnNavBottomLeft;
+            @NavMiddleLeft.started -= instance.OnNavMiddleLeft;
+            @NavMiddleLeft.performed -= instance.OnNavMiddleLeft;
+            @NavMiddleLeft.canceled -= instance.OnNavMiddleLeft;
+            @NavMiddleRight.started -= instance.OnNavMiddleRight;
+            @NavMiddleRight.performed -= instance.OnNavMiddleRight;
+            @NavMiddleRight.canceled -= instance.OnNavMiddleRight;
             @LeftClick.started -= instance.OnLeftClick;
             @LeftClick.performed -= instance.OnLeftClick;
             @LeftClick.canceled -= instance.OnLeftClick;
@@ -781,14 +810,15 @@ public partial class @BaseInputs: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnPhotoMode(InputAction.CallbackContext context);
         void OnTakePhoto(InputAction.CallbackContext context);
+        void OnOpenUI(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
-        void OnOpenUI(InputAction.CallbackContext context);
-        void OnNext(InputAction.CallbackContext context);
-        void OnPrevious(InputAction.CallbackContext context);
-        void OnMap(InputAction.CallbackContext context);
-        void OnInventory(InputAction.CallbackContext context);
+        void OnCloseUI(InputAction.CallbackContext context);
+        void OnNavBottomRight(InputAction.CallbackContext context);
+        void OnNavBottomLeft(InputAction.CallbackContext context);
+        void OnNavMiddleLeft(InputAction.CallbackContext context);
+        void OnNavMiddleRight(InputAction.CallbackContext context);
         void OnLeftClick(InputAction.CallbackContext context);
     }
 }

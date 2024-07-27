@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenUI",
+                    "type": "Button",
+                    "id": "2f12de04-c506-48f9-9c8c-2f6f72398ca0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -278,6 +287,17 @@
                     "action": "TakePhoto",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd226232-9997-40af-8553-f3301189af1f",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -286,7 +306,7 @@
             "id": "f31e4faa-1c5c-4639-8b04-28d228fa7d69",
             "actions": [
                 {
-                    "name": "OpenUI",
+                    "name": "CloseUI",
                     "type": "Button",
                     "id": "3475532f-8a12-4e12-8248-4900f2c2ac50",
                     "expectedControlType": "Button",
@@ -295,7 +315,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Next",
+                    "name": "NavBottomRight",
                     "type": "Button",
                     "id": "236161d8-15ac-415a-8910-91d86584b88a",
                     "expectedControlType": "Button",
@@ -304,7 +324,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Previous",
+                    "name": "NavBottomLeft",
                     "type": "Button",
                     "id": "12b005dd-ca50-42ee-9b22-71222e647d34",
                     "expectedControlType": "Button",
@@ -313,18 +333,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Map",
+                    "name": "NavMiddleLeft",
                     "type": "Button",
-                    "id": "fd933fc8-63b2-41f6-bb4e-13c9323a8d50",
+                    "id": "ac1d0731-3e0c-4ded-a649-df7b4660f713",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory",
+                    "name": "NavMiddleRight",
                     "type": "Button",
-                    "id": "a4aef749-f644-4747-97b5-6dd2c642eb42",
+                    "id": "064f1341-1593-4088-9e8a-ceb76cc0b591",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -348,7 +368,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "OpenUI",
+                    "action": "CloseUI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -359,7 +379,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Next",
+                    "action": "NavBottomRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -370,29 +390,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Previous",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0a346106-90cf-4e06-a3d7-5757f0ed7ce1",
-                    "path": "<Keyboard>/m",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Map",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f1c10c75-b5db-435e-a657-dd906d60639b",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Inventory",
+                    "action": "NavBottomLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -404,6 +402,28 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "313c0236-fe88-4e45-8b47-6966c84180dd",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "NavMiddleLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b4a8c93d-e759-4292-8fd4-8e8ff04ea282",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "NavMiddleRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

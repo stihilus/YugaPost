@@ -7,15 +7,18 @@ using UnityEngine.InputSystem.Utilities;
 
 public class InputEventManager : Singleton<InputEventManager>
 {
-    private BaseInputs inputActions;
+    public BaseInputs inputActions;
 
     public UnityEvent<Vector2> OnMoveEvent;
     public UnityEvent<Vector2> OnLookEvent;
     public UnityEvent OnJumpEvent;
     public UnityEvent OnInteractEvent;
     public UnityEvent OnOpenUIEvent;
-    public UnityEvent OnNextUIEvent;
-    public UnityEvent OnPreviousUIEvent;
+    public UnityEvent OnCloseUIEvent;
+    public UnityEvent OnNavBottomLeftEvent;
+    public UnityEvent OnNavBottomRightEvent;
+    public UnityEvent OnNavMiddleLeftEvent;
+    public UnityEvent OnNavMiddleRightEvent;
     public UnityEvent OnMapOpen;
     public UnityEvent OnInventoryOpen;
     public UnityEvent OnMapEvent;
@@ -37,8 +40,12 @@ public class InputEventManager : Singleton<InputEventManager>
         inputActions.Player.PhotoMode.performed += OnPhotoMode;
         inputActions.Player.TakePhoto.performed += OnTakePhoto;
         
-        inputActions.UI.OpenUI.performed += OnOpenUI;
-        inputActions.UI.Map.performed += OnMap;
+        inputActions.Player.OpenUI.performed += OnOpenUI;
+        inputActions.UI.CloseUI.performed += OnCloseUI;
+        inputActions.UI.NavBottomLeft.performed += OnNavBottomLeft;
+        inputActions.UI.NavBottomRight.performed += OnNavBottomRight;
+        inputActions.UI.NavMiddleLeft.performed += OnNavMiddleLeft;
+        inputActions.UI.NavMiddleRight.performed += OnNavMiddleRight;
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -73,14 +80,34 @@ public class InputEventManager : Singleton<InputEventManager>
         OnTakePhotoEvent.Invoke();
     }
 
-    private void OnMap(InputAction.CallbackContext context)
-    {
-        OnMapEvent.Invoke();
-    }
-
     private void OnOpenUI(InputAction.CallbackContext context)
     {
         OnOpenUIEvent.Invoke();
+    }
+
+    private void OnCloseUI(InputAction.CallbackContext context)
+    {
+        OnCloseUIEvent.Invoke();
+    }
+
+    private void OnNavBottomLeft(InputAction.CallbackContext context)
+    {
+        OnNavBottomLeftEvent.Invoke();
+    }
+
+    private void OnNavBottomRight(InputAction.CallbackContext context)
+    {
+        OnNavBottomRightEvent.Invoke();
+    }
+
+    private void OnNavMiddleLeft(InputAction.CallbackContext context)
+    {
+        OnNavMiddleLeftEvent.Invoke();
+    }
+
+    private void OnNavMiddleRight(InputAction.CallbackContext context)
+    {
+        OnNavMiddleRightEvent.Invoke();
     }
 
     private void OnDisable()

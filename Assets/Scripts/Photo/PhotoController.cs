@@ -26,6 +26,7 @@ public class PhotoController : MonoBehaviour
     [Header("General")]
     public int photoShotsRemaining;
     public int photoShotsMax = 10;
+    public GameObject[] shotsVisuals;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -38,6 +39,8 @@ public class PhotoController : MonoBehaviour
     [Header("Photo Album")]
     public PhotoAlbum photoAlbum;
     public List<Image> photoAlbumImages;
+
+    private bool canTakePhoto;
     
     private void OnEnable() 
     {
@@ -109,7 +112,9 @@ public class PhotoController : MonoBehaviour
 
     // toggle photo mode
     public void OnPhotoCamera(InputAction.CallbackContext context)
-    {
+    {   
+        if (GameStateManager.CurrentGameState == GameState.Inventory) return;
+        
         if (!context.performed) return;
         
         photoMode = !photoMode;
@@ -120,7 +125,11 @@ public class PhotoController : MonoBehaviour
 
             AudioControl.Play(audioSource, photoModeOnSound);
 
+            canTakePhoto = true;
+
             photoRenderTexture.SetActive(true);
+
+            GameStateManager.SetGameState(GameState.Photo);
         }
         else if (!photoMode)
         {
@@ -129,12 +138,16 @@ public class PhotoController : MonoBehaviour
             AudioControl.Play(audioSource, photoModeOffSound);
 
             photoRenderTexture.SetActive(false);
+
+            GameStateManager.SetGameState(GameState.InGame);
         }
     }
 
     // take photo
     public void OnTakePhoto(InputAction.CallbackContext context)
     {
+        if (!canTakePhoto) return;
+
         if (!context.performed || !photoMode) return;
         
         if (photoShotsRemaining <= 0)
@@ -146,6 +159,8 @@ public class PhotoController : MonoBehaviour
         photoShotsRemaining--;
 
         GameManager.Instance.photoCounter++;
+
+        shotsVisuals[photoShotsRemaining].SetActive(false);
         
         GameEvents.TakePhoto();
 
@@ -190,6 +205,7 @@ public class PhotoController : MonoBehaviour
 
     private IEnumerator CaptureScreen(Camera camera, int layerToIgnore)
     {
+        canTakePhoto = false;
         // Wait for the end of the current frame
         yield return new WaitForEndOfFrame();
 
@@ -219,18 +235,21 @@ public class PhotoController : MonoBehaviour
         SaveLoad.SaveTexture(fileName, photo);
 
         // Add the sprite to the photo album
-        photoAlbum.AddPhoto(photoSprite);
+        photoAlbum.AddPhoto(fileName);
 
         // Reset the camera's targetTexture and cullingMask
         camera.targetTexture = photoRenderTexture.GetComponent<RawImage>().texture as RenderTexture;
         camera.cullingMask = ~0;
+
+        yield return new WaitForSeconds(1f);
+        canTakePhoto = true;
     }
 
     private void PopulateAlbum()
     {
         for (int i = 0; i < photoAlbum.photos.Count; i++)
         {
-            photoAlbumImages[i].sprite = photoAlbum.photos[i];
+            // photoAlbumImages[i].sprite = photoAlbum.photos[i]; TODO
         }
     }
 

@@ -18,4 +18,5 @@ public class MailData
     public List<string> middles;
     public List<string> concepts;
     public List<string> finishings;
+    public List<int> postmarks;
 }

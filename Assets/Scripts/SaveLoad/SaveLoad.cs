@@ -42,7 +42,7 @@ public static class SaveLoad
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 
         if (File.Exists(filePath))
-        {
+        {   
             byte[] bytes = File.ReadAllBytes(filePath);
             Texture2D texture = new Texture2D(2, 2); // Set dimensions appropriately
             texture.LoadImage(bytes);

@@ -7,6 +7,10 @@ public static class GameEvents
     public static event Action OnFadeIn;
     public static event Action OnFadeOut;
     
+    // Menu
+    public static event Action OnMenuOpened;
+    public static event Action OnMenuClosed;
+
     // Photo
     public static event Action OnPhotoShotsPurchased;
     public static event Action OnPhotoModeOn;
@@ -40,6 +44,18 @@ public static class GameEvents
     public static void FadeOut()
     {
         OnFadeOut?.Invoke();
+    }
+
+    public static void MenuOpened()
+    {
+        Debug.Log("Menu opened");
+        OnMenuOpened?.Invoke();
+    }
+
+    public static void MenuClosed()
+    {
+        Debug.Log("Menu closed");
+        OnMenuClosed?.Invoke();
     }
 
     public static void PhotoShotsPurchased()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -11,6 +9,8 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
+
+        GameStateManager.SetGameState(GameState.InGame);
         
         // Set the cursor to not be visible
         Cursor.visible = false;

@@ -1155,7 +1155,6 @@ GameObject:
   - component: {fileID: 800812175206486534}
   - component: {fileID: 800812175206486535}
   - component: {fileID: 800812175206486536}
-  - component: {fileID: 800812175206486533}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1266,19 +1265,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &800812175206486533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800812175206486538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ControlPath: <Keyboard>/tab
 --- !u!1 &800812175261206212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +1743,7 @@ RectTransform:
   - {fileID: 800812175383601672}
   - {fileID: 822667898518050150}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1781,6 +1767,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1847,6 +1834,7 @@ MonoBehaviour:
   fader: {fileID: 4369488068394006309}
   renderTexture: {fileID: 800812175778450424}
   cashText: {fileID: 8983774442565214103}
+  tabButton: {fileID: 800812175206486536}
   recieverName: {fileID: 800812175919159229}
   address: {fileID: 800812175958768120}
   number: {fileID: 800812176330933281}
@@ -1878,7 +1866,7 @@ GameObject:
   - component: {fileID: 800812175548012592}
   - component: {fileID: 800812175548012593}
   m_Layer: 5
-  m_Name: AlbumBtn
+  m_Name: PhotosBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

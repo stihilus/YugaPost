@@ -52,6 +52,9 @@ public class MailGenerator : MonoBehaviour
         mail.address = addressData.street;
         mail.number = addressData.numbers.GetRandom();
 
+        mail.postmark1 = mailData.postmarks.GetRandom();
+        mail.postmark2 = mailData.postmarks.GetRandom();
+
         mail.message = mailData.intros.GetRandom() + "/n/n" 
             + mailData.middles.GetRandom() + " "
             + mailData.concepts.GetRandom() + "/n/n"
