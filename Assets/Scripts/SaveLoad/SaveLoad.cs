@@ -54,4 +54,14 @@ public static class SaveLoad
             return null;
         }
     }
+
+    public static void DeleteAllData()
+    {
+        string[] files = Directory.GetFiles(Application.persistentDataPath);
+
+        foreach (string file in files)
+        {
+            File.Delete(file);
+        }
+    }
 }

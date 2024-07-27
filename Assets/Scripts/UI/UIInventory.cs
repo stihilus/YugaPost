@@ -212,13 +212,13 @@ public class UIInventory : MonoBehaviour
             player.animator.SetBool("Grounded", true);
             player.animator.SetFloat("Speed", 0);
             player.enabled = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
             HideUI();
             
             UpdateTabVisibility();
             UpdateShipments();
             UpdatePhotoAlbumFromPersistentDataPath();
+
+            navMiddle.SetActive(true);
             
             inputEventManager.OnNavBottomLeftEvent.AddListener(() => CycleTabs(UIDirections.Left));
             inputEventManager.OnNavBottomRightEvent.AddListener(() => CycleTabs(UIDirections.Right));

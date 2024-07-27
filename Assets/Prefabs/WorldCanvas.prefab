@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3779290816265930901}
   - component: {fileID: 2919431940620336059}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3315104418665264762}
   - component: {fileID: 456071363250488247}
   - component: {fileID: 8214815669135474978}
+  - component: {fileID: 6953306270056585802}
   m_Layer: 5
   m_Name: WorldCanvas
   m_TagString: Untagged
@@ -192,6 +193,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -237,3 +239,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6953306270056585802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872195655546824728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfad67d0822f484eb7d2d41aa7df6d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
