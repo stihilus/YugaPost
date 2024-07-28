@@ -75,6 +75,8 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+        public bool Disable;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -161,6 +163,8 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (Disable) return;
+            
             _hasAnimator = TryGetComponent(out animator);
 
             JumpAndGravity();
@@ -172,6 +176,9 @@ namespace StarterAssets
         {
             CameraRotation();
         }
+
+        public void DisablePlayerCtrl() { Disable = true; _controller.enabled = false; }
+        public void EnablePlayerCtrl() { Disable = false; _controller.enabled = true; }
 
         private void OnPhotoModeOn()
         {
