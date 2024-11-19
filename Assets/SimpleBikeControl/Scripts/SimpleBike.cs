@@ -65,7 +65,7 @@ namespace KikiNgao.SimpleBikeControl
         private bool IsSpeedUp() => inputManager.speedUp;
 
         private float GetBikeSpeedKm() => GetBikeSpeedMs() * 3.6f;
-        private float GetBikeSpeedMs() => m_Rigidbody.velocity.magnitude;
+        private float GetBikeSpeedMs() => m_Rigidbody.linearVelocity.magnitude;
         private float GetBikeAngle() => WrapAngle(transform.eulerAngles.z);
 
         public bool TiltToRight() => WrapAngle(transform.eulerAngles.z) <= 0;
@@ -154,8 +154,8 @@ namespace KikiNgao.SimpleBikeControl
         private void MovingBike()
         {
             Freeze = false;
-            m_Rigidbody.drag = GetBikeSpeedMs() / m_Rigidbody.mass * airResistance;
-            m_Rigidbody.angularDrag = 5 + GetBikeSpeedMs() / (m_Rigidbody.mass / 10);
+            m_Rigidbody.linearDamping = GetBikeSpeedMs() / m_Rigidbody.mass * airResistance;
+            m_Rigidbody.angularDamping = 5 + GetBikeSpeedMs() / (m_Rigidbody.mass / 10);
 
             frontWheelCollider.brakeTorque = 0;
             rearWheelCollider.motorTorque = !IsReverse() ? currentLegPower * inputManager.vertical : reversePower * inputManager.vertical;
@@ -190,8 +190,8 @@ namespace KikiNgao.SimpleBikeControl
         private void Rest()
         {
             // the bike auto stop due to high drag
-            m_Rigidbody.drag = restDrag;
-            m_Rigidbody.angularDrag = restAngularDrag;
+            m_Rigidbody.linearDamping = restDrag;
+            m_Rigidbody.angularDamping = restAngularDrag;
             ResetWheelsCollider();
             UpdateCenterOfMass();
 
@@ -202,8 +202,8 @@ namespace KikiNgao.SimpleBikeControl
         {
             falling = true;
             // the bike auto stop due to high drag
-            m_Rigidbody.drag = fallingDrag;
-            m_Rigidbody.angularDrag = fallingAngurlarDrag;
+            m_Rigidbody.linearDamping = fallingDrag;
+            m_Rigidbody.angularDamping = fallingAngurlarDrag;
 
             UpdateCenterOfMass();
             UpdateWheelDisplay();
