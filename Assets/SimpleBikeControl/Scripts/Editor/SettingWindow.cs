@@ -312,7 +312,7 @@ namespace KikiNgao.SimpleBikeControl
             else
             {
                 bikerAnim.cullingMode = AnimatorCullingMode.AlwaysAnimate;
-                bikerAnim.updateMode = AnimatorUpdateMode.AnimatePhysics;
+                bikerAnim.updateMode = AnimatorUpdateMode.Fixed;
             }
 
             //add Tag and layer

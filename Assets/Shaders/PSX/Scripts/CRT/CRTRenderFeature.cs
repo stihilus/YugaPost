@@ -11,14 +11,13 @@ public class CRTRenderFeature : ScriptableRendererFeature
         crtPass = new CRTPass(RenderPassEvent.BeforeRenderingPostProcessing);
     }
 
-    //ScripstableRendererFeature is an abstract class, you need this method
+    // ScriptableRendererFeature is an abstract class, you need this method
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
     {
-        crtPass.Setup(renderer.cameraColorTarget);
+        crtPass.Setup(renderer.cameraColorTargetHandle);
         renderer.EnqueuePass(crtPass);
     }
 }
-
 
 public class CRTPass : ScriptableRenderPass
 {
@@ -26,25 +25,25 @@ public class CRTPass : ScriptableRenderPass
     static readonly string k_RenderTag = "Render CRT Effects";
     static readonly int MainTexId = Shader.PropertyToID("_MainTex");
     static readonly int TempTargetId = Shader.PropertyToID("_TempTargetCRT");
-    
+
     static readonly int ScreenBendX = Shader.PropertyToID("_ScreenBendX");
     static readonly int ScreenBendY = Shader.PropertyToID("_ScreenBendY");
     static readonly int VignetteAmount = Shader.PropertyToID("_VignetteAmount");
     static readonly int VignetteSize = Shader.PropertyToID("_VignetteSize");
     static readonly int VignetteRounding = Shader.PropertyToID("_VignetteRounding");
     static readonly int VignetteSmoothing = Shader.PropertyToID("_VignetteSmoothing");
-    
+
     static readonly int ScanLinesDensity = Shader.PropertyToID("_ScanLinesDensity");
     static readonly int ScanLinesSpeed = Shader.PropertyToID("_ScanLinesSpeed");
     static readonly int NoiseAmount = Shader.PropertyToID("_NoiseAmount");
-    
+
     static readonly int ChromaticRed = Shader.PropertyToID("_ChromaticRed");
     static readonly int ChromaticGreen = Shader.PropertyToID("_ChromaticGreen");
     static readonly int ChromaticBlue = Shader.PropertyToID("_ChromaticBlue");
-    
+
     Crt m_Crt;
     Material crtMaterial;
-    RenderTargetIdentifier currentTarget;
+    RTHandle currentTarget;
 
     public CRTPass(RenderPassEvent evt)
     {
@@ -69,7 +68,7 @@ public class CRTPass : ScriptableRenderPass
         if (!renderingData.cameraData.postProcessEnabled) return;
 
         var stack = VolumeManager.instance.stack;
-        
+
         this.m_Crt = stack.GetComponent<Crt>();
         if (this.m_Crt == null) { return; }
         if (!this.m_Crt.IsActive()) { return; }
@@ -80,7 +79,7 @@ public class CRTPass : ScriptableRenderPass
         CommandBufferPool.Release(cmd);
     }
 
-    public void Setup(in RenderTargetIdentifier currentTarget)
+    public void Setup(RTHandle currentTarget)
     {
         this.currentTarget = currentTarget;
     }
@@ -94,7 +93,7 @@ public class CRTPass : ScriptableRenderPass
         //getting camera width and height 
         var w = cameraData.camera.scaledPixelWidth;
         var h = cameraData.camera.scaledPixelHeight;
-        
+
         //setting parameters here 
         cameraData.camera.depthTextureMode = cameraData.camera.depthTextureMode | DepthTextureMode.Depth;
 
@@ -104,15 +103,15 @@ public class CRTPass : ScriptableRenderPass
         this.crtMaterial.SetFloat(VignetteSize, this.m_Crt.vignetteSize.value);
         this.crtMaterial.SetFloat(VignetteRounding, this.m_Crt.vignetteRounding.value);
         this.crtMaterial.SetFloat(VignetteSmoothing, this.m_Crt.vignetteSmoothing.value);
-        
+
         this.crtMaterial.SetFloat(ScanLinesDensity, this.m_Crt.scanlinesDensity.value);
         this.crtMaterial.SetFloat(ScanLinesSpeed, this.m_Crt.scanlinesSpeed.value);
         this.crtMaterial.SetFloat(NoiseAmount, this.m_Crt.noiseAmount.value);
-        
+
         this.crtMaterial.SetVector(ChromaticRed, this.m_Crt.chromaticRed.value);
         this.crtMaterial.SetVector(ChromaticGreen, this.m_Crt.chromaticGreen.value);
         this.crtMaterial.SetVector(ChromaticBlue, this.m_Crt.chromaticBlue.value);
-        
+
         int shaderPass = 0;
         cmd.SetGlobalTexture(MainTexId, source);
         cmd.GetTemporaryRT(destination, w, h, 0, FilterMode.Point, RenderTextureFormat.Default);

@@ -87,8 +87,9 @@ public class PhotoController : MonoBehaviour
     {
         if (!context.performed || !photoMode) return;
 
-        // Read the normalized value, adjust it to control the speed of zoom
-        float zoomDelta = Mathf.Clamp(-context.ReadValue<float>(), -zoomAmount, zoomAmount);
+        // Get scroll direction (-1 or 1) and multiply by zoomAmount
+        float direction = -Mathf.Sign(context.ReadValue<float>());
+        float zoomDelta = direction * zoomAmount;
 
         // Calculate the target field of view
         float targetFOV = photoCameraObject.fieldOfView + zoomDelta;
@@ -220,7 +221,7 @@ public class PhotoController : MonoBehaviour
         camera.Render();
 
         // Create a new Texture2D and read the pixels from the RenderTexture
-        Texture2D photo = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGB24, false);
+        Texture2D photo = new Texture2D(renderTexture.width / 6, renderTexture.height / 6, TextureFormat.RGB24, false);
         RenderTexture.active = renderTexture;
         photo.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
         photo.Apply();
