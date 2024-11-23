@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4ad69391a20b2c042ae47c07e60a0eec
+guid: fa946b57fe5617a46bf5d8f8ac665a73
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -12,8 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: plastic
-    second: {fileID: 2100000, guid: 92b682f2902cc2a4fad3ca25c058d465, type: 2}
+      name: doors_2
+    second: {fileID: 2100000, guid: 7aced9d02db54a242870bcd54c071404, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows.002
+    second: {fileID: 2100000, guid: 89e9d49aeb0765640a58bc5d273c7008, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows_2
+    second: {fileID: 2100000, guid: b474c1172f4ee7f40a5c75ce812be692, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

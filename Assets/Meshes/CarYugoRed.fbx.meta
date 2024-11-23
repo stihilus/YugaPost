@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4ad69391a20b2c042ae47c07e60a0eec
+guid: f1533b2410abd8b4f836d922bbacdfd5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: concrete
-    second: {fileID: 2100000, guid: c531f1746a70eaf469094f23aaefede4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: plastic
-    second: {fileID: 2100000, guid: 92b682f2902cc2a4fad3ca25c058d465, type: 2}
+      name: Car_1
+    second: {fileID: 2100000, guid: 408dc797d99a9084fb28a1b19b7041c2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
